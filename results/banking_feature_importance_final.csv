@@ -1,0 +1,16 @@
+feature,importance
+female_high_risk,0.09052634
+zero_balance_multiple_products,0.07118444
+products_3_plus,0.06251875
+age_bin_30_34,0.05497788
+age_bin_25_29,0.052888304
+composite_risk_score_scaled,0.03515643
+age_bin_35_39,0.03456185
+age_bin_60+,0.033967502
+age_bin_18_24,0.033197846
+customer_value_tier_Low,0.03013019
+has_multiple_products,0.023820236
+age_bin_40_44,0.018655224
+is_active_member,0.017898075
+is_high_balance,0.0176797
+geographic_risk_score,0.016788758

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Risk & Retention Intelligence Engine</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            flex: 1;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 40px 0;
+        }
+        
+        .header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #fff, #e0e0e0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .subtitle {
+            font-size: 1.5rem;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+        
+        .metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .metric-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .metric-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+        
+        .metric-value {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #4CAF50;
+        }
+        
+        .metric-label {
+            font-size: 1.1rem;
+            opacity: 0.8;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+        
+        .feature {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .feature h4 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+        
+        .feature p {
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+        
+        .cta-section {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: linear-gradient(45deg, #4CAF50, #45a049);
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            margin: 10px;
+            transition: transform 0.3s ease;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background: linear-gradient(45deg, #2196F3, #1976D2);
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.2);
+            margin-top: auto;
+        }
+        
+        .disclaimer {
+            background: rgba(255, 193, 7, 0.2);
+            border: 1px solid rgba(255, 193, 7, 0.5);
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .metrics {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Risk & Retention Intelligence Engine</h1>
+            <p class="subtitle">Advanced Banking Churn & Fraud Detection System</p>
+            <p>Comprehensive Machine Learning Platform for Financial Risk Management</p>
+        </div>
+
+        <div class="metrics">
+            <div class="metric-card">
+                <h3>Banking Churn Model</h3>
+                <div class="metric-value">91.6%</div>
+                <div class="metric-label">Accuracy</div>
+                <p style="margin-top: 10px; font-size: 0.9rem;">95.4% Precision • 87.4% Recall</p>
+            </div>
+            <div class="metric-card">
+                <h3>Fraud Detection Model</h3>
+                <div class="metric-value">96.0%</div>
+                <div class="metric-label">Accuracy</div>
+                <p style="margin-top: 10px; font-size: 0.9rem;">70.9% Precision • 75.7% Recall</p>
+            </div>
+        </div>
+
+        <div class="disclaimer">
+            <strong>Note:</strong> This is a demonstration deployment. Prediction results are simulated as model hosting has expired. 
+            For full functionality with trained models, please run the application locally.
+        </div>
+
+        <div class="features">
+            <div class="feature">
+                <h4>Advanced Analytics</h4>
+                <p>30+ comprehensive visualizations covering demographic analysis, customer segmentation, and behavioral patterns</p>
+            </div>
+            <div class="feature">
+                <h4>Real-time Predictions</h4>
+                <p>Live ML model inference with sub-second response times and professional-grade logging</p>
+            </div>
+            <div class="feature">
+                <h4>Interactive Dashboard</h4>
+                <p>Modern UI with data insights, prediction interfaces, and comprehensive analytics</p>
+            </div>
+            <div class="feature">
+                <h4>Production Ready</h4>
+                <p>Enterprise-level architecture with robust error handling and scalable design</p>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <a href="dashboard/index.html" class="btn">Launch Dashboard</a>
+            <a href="https://github.com/heyadrsh/banking-customer-churn-fraud-prediction" class="btn btn-secondary">View Source Code</a>
+        </div>
+
+        <div style="text-align: center; margin: 40px 0;">
+            <h3>Key Features & Insights</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 20px;">
+                <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 10px;">
+                    <h4>Geographic Risk</h4>
+                    <p>Germany: 32.4%<br>Spain: 16.7%<br>France: 16.2%</p>
+                </div>
+                <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 10px;">
+                    <h4>Gender Analysis</h4>
+                    <p>Female: 25.1% churn<br>Male: 16.5% churn</p>
+                </div>
+                <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 10px;">
+                    <h4>Age Patterns</h4>
+                    <p>Peak: 45-49 (43.4%)<br>Lowest: 25-29 (7.1%)</p>
+                </div>
+                <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 10px;">
+                    <h4>Product Impact</h4>
+                    <p>3+ Products: 16.2%<br>higher churn risk</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 Risk & Retention Intelligence Engine. Advanced ML for Financial Services.</p>
+        <p style="margin-top: 10px; font-size: 0.8rem; opacity: 0.7;">
+            Results shown are simulations - Model hosting expired
+        </p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+DATABASE PLACEHOLDER - banking_insights.db
+
+This file contains the SQLite database with processed banking insights and analysis results.
+
+Original file: banking_insights.db
+Size: ~10MB
+Database Type: SQLite3
+Tables: Customer demographics, churn analysis, feature importance, risk scores
+
+Database Contents:
+- Processed customer demographic data
+- Churn analysis results by various segments
+- Feature importance rankings
+- Risk score calculations
+- Geographic and behavioral analysis
+
+Note for Deployment:
+Due to file size limitations, the database file is not included in this repository.
+The analysis scripts can regenerate the database from the source data.
+
+To recreate the database:
+1. Ensure the source data files are in the /data/ directory
+2. Run the database setup script: python scripts/01_banking_database_setup.py
+3. The database will be automatically created with all analysis results

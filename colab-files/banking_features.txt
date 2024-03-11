@@ -1,0 +1,15 @@
+LARGE FILE PLACEHOLDER - banking_features.csv
+
+This is a copy of the banking features file used in Google Colab training.
+
+Original file: banking_features.csv
+Size: ~5MB
+Rows: 10,000 customers  
+Columns: 64 engineered features
+
+This file is identical to /features/banking_features.csv and was copied to the colab-files directory for use in Google Colab model training sessions.
+
+To recreate this file:
+1. Run the feature engineering scripts locally
+2. Upload the generated banking_features.csv to your Colab session
+3. Use it for model training with the colab training scripts

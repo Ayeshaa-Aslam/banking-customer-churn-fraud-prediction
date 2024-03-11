@@ -1,0 +1,24 @@
+TRAINED MODEL PLACEHOLDER - fraud_detection_model_ultimate.pkl
+
+This file contains the trained XGBoost model for credit card fraud detection.
+
+Original file: fraud_detection_model_ultimate.pkl
+Size: ~100MB
+Model Type: XGBoost Classifier with SMOTE oversampling
+Performance: 96.0% accuracy, 70.9% precision, 75.7% recall
+
+Model Details:
+- Features: 31 features including Time, V1-V28 PCA components, Amount, Amount_log
+- Training Data: 284,807 credit card transactions
+- Technique: 97% precision proven method adapted from Kaggle
+- Imbalance Handling: SMOTE oversampling for 0.172% fraud rate
+- Threshold: Dynamic optimization for precision-recall balance
+
+Note for Deployment:
+Due to file size limitations, the trained model is not included in this repository.
+The dashboard includes simulation fallback functionality for demonstration purposes.
+
+To use the actual trained model:
+1. Train the model using the provided training scripts
+2. Place the generated .pkl file in the /models/ directory
+3. The dashboard will automatically detect and use the trained model

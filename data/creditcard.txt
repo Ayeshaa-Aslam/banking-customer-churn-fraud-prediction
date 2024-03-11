@@ -1,0 +1,22 @@
+LARGE FILE PLACEHOLDER - creditcard.csv
+
+This file contains the credit card fraud detection dataset with 284,807 transaction records.
+
+Original file: creditcard.csv
+Size: ~150MB
+Columns: Time, V1-V28 (PCA features), Amount, Class
+
+Download Instructions:
+Due to GitHub file size limitations, the original dataset is not included in this repository.
+
+To obtain the dataset:
+1. Visit: https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud
+2. Download the "creditcard.csv" file
+3. Place it in the /data/ directory to run the fraud detection scripts
+
+Dataset Description:
+- 284,807 credit card transactions over 2 days
+- Highly imbalanced: 492 fraudulent transactions (0.172%)
+- Features V1-V28 are PCA-transformed for privacy protection
+- Target variable: 'Class' (1 = fraud, 0 = legitimate)
+- Used for training the fraud detection model (96.0% accuracy)

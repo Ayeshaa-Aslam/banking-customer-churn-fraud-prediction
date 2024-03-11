@@ -1,0 +1,21 @@
+LARGE FILE PLACEHOLDER - Bank Customer Churn Prediction.csv
+
+This file contains the banking customer dataset with 10,000 customer records.
+
+Original file: Bank Customer Churn Prediction.csv
+Size: ~1MB
+Columns: CustomerID, Surname, CreditScore, Geography, Gender, Age, Tenure, Balance, NumOfProducts, HasCrCard, IsActiveMember, EstimatedSalary, Exited
+
+Download Instructions:
+Due to GitHub file size limitations, the original dataset is not included in this repository.
+
+To obtain the dataset:
+1. Visit: https://www.kaggle.com/datasets/shantanudhakadd/bank-customer-churn-prediction
+2. Download the "Bank Customer Churn Prediction.csv" file
+3. Place it in the /data/ directory to run the analysis scripts
+
+Dataset Description:
+- 10,000 bank customers with demographic and account information
+- Target variable: 'Exited' (1 = churned, 0 = retained)
+- Features include age, geography, credit score, account balance, and product usage
+- Used for training the banking churn prediction model (91.6% accuracy)

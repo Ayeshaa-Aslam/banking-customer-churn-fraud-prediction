@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Risk & Retention Intelligence Engine - Banking Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/plotly.js-dist@2.26.0/plotly.min.js"></script>
+</head>
+<body>
+    <!-- Navigation Header -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <i class="fas fa-shield-alt"></i>
+                <span>Risk & Retention Engine</span>
+            </div>
+            <div class="nav-menu">
+                <a href="#overview" class="nav-link active">Overview</a>
+                <a href="#insights" class="nav-link">Data Insights</a>
+                <a href="#models" class="nav-link">ML Models</a>
+                <a href="#predict" class="nav-link">Predictions</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Dashboard Container -->
+    <div class="dashboard-container">
+        
+        <!-- Overview Section -->
+        <section id="overview" class="section active">
+            <div class="section-header">
+                <h1><i class="fas fa-tachometer-alt"></i> Executive Dashboard</h1>
+                <p>Real-time banking risk & retention intelligence powered by advanced ML</p>
+                <div style="background: #fff3cd; border: 1px solid #ffeaa7; border-radius: 8px; padding: 15px; margin: 20px 0; color: #856404; text-align: center;">
+                    <i class="fas fa-exclamation-triangle" style="margin-right: 8px; color: #f39c12;"></i>
+                    <strong>Demo Mode:</strong> Prediction results are simulated as model hosting has expired. For full functionality with trained models, run locally.
+                </div>
+            </div>
+
+            <!-- Key Metrics Cards -->
+            <div class="metrics-grid">
+                <div class="metric-card churn-card">
+                    <div class="metric-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="metric-content">
+                        <h3>Banking Churn Model</h3>
+                        <div class="metric-value">91.6%</div>
+                        <div class="metric-label">Accuracy</div>
+                        <div class="metric-details">
+                            <span class="detail-item"><i class="fas fa-bullseye"></i> 95.4% Precision</span>
+                            <span class="detail-item"><i class="fas fa-search"></i> 87.4% Recall</span>
+                        </div>
+                    </div>
+                    <div class="metric-status success">
+                        <i class="fas fa-check-circle"></i> Production Ready
+                    </div>
+                </div>
+
+                <div class="metric-card fraud-card">
+                    <div class="metric-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="metric-content">
+                        <h3>Fraud Detection Model</h3>
+                        <div class="metric-value">99.8%</div>
+                        <div class="metric-label">Accuracy</div>
+                        <div class="metric-details">
+                            <span class="detail-item"><i class="fas fa-bullseye"></i> 70.9% Precision</span>
+                            <span class="detail-item"><i class="fas fa-search"></i> 75.7% Recall</span>
+                        </div>
+                    </div>
+                    <div class="metric-status success">
+                        <i class="fas fa-check-circle"></i> Business Ready
+                    </div>
+                </div>
+
+                <div class="metric-card data-card">
+                    <div class="metric-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <div class="metric-content">
+                        <h3>Dataset Coverage</h3>
+                        <div class="metric-value">294K</div>
+                        <div class="metric-label">Total Records</div>
+                        <div class="metric-details">
+                            <span class="detail-item"><i class="fas fa-users"></i> 10K Banking</span>
+                            <span class="detail-item"><i class="fas fa-credit-card"></i> 284K Fraud</span>
+                        </div>
+                    </div>
+                    <div class="metric-status info">
+                        <i class="fas fa-info-circle"></i> Complete Coverage
+                    </div>
+                </div>
+
+                <div class="metric-card features-card">
+                    <div class="metric-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <div class="metric-content">
+                        <h3>Feature Engineering</h3>
+                        <div class="metric-value">64</div>
+                        <div class="metric-label">Engineered Features</div>
+                        <div class="metric-details">
+                            <span class="detail-item"><i class="fas fa-chart-line"></i> Risk Scores</span>
+                            <span class="detail-item"><i class="fas fa-user-tag"></i> Demographics</span>
+                        </div>
+                    </div>
+                    <div class="metric-status info">
+                        <i class="fas fa-info-circle"></i> Advanced Pipeline
+                    </div>
+                </div>
+            </div>
+
+            <!-- Business Impact Section -->
+            <div class="impact-section">
+                <h2><i class="fas fa-chart-line"></i> Business Impact Analysis</h2>
+                <div class="impact-grid">
+                    <div class="impact-card">
+                        <h4>Customer Retention</h4>
+                        <div class="impact-stat">87.4%</div>
+                        <p>of at-risk customers identified for proactive retention campaigns</p>
+                    </div>
+                    <div class="impact-card">
+                        <h4>Fraud Prevention</h4>
+                        <div class="impact-stat">99.8%</div>
+                        <p>overall fraud detection accuracy with minimal false positives</p>
+                    </div>
+                    <div class="impact-card">
+                        <h4>Cost Efficiency</h4>
+                        <div class="impact-stat">95.4%</div>
+                        <p>precision reduces unnecessary retention marketing spend</p>
+                    </div>
+                    <div class="impact-card">
+                        <h4>Risk Coverage</h4>
+                        <div class="impact-stat">75.7%</div>
+                        <p>of fraudulent transactions caught in real-time</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Data Insights Section -->
+        <section id="insights" class="section">
+            <div class="section-header">
+                <h1><i class="fas fa-chart-bar"></i> Data Insights & Analytics</h1>
+                <p>Comprehensive analysis of banking customer behavior and risk patterns</p>
+            </div>
+
+            <!-- Insights Dashboard -->
+            <div class="insights-container">
+                <!-- Geographic Risk Analysis -->
+                <div class="insight-panel">
+                    <h3><i class="fas fa-globe"></i> Geographic Risk Analysis</h3>
+                    <div class="chart-container">
+                        <canvas id="countryChurnChart"></canvas>
+                    </div>
+                    <div class="insight-summary">
+                        <div class="summary-item">
+                            <span class="label">Highest Risk:</span>
+                            <span class="value">Germany (32.4% churn rate)</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="label">Lowest Risk:</span>
+                            <span class="value">France (16.2% churn rate)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Age Demographics -->
+                <div class="insight-panel">
+                    <h3><i class="fas fa-chart-line"></i> Age Risk Profile</h3>
+                    <div class="chart-container">
+                        <canvas id="ageChurnChart"></canvas>
+                    </div>
+                    <div class="insight-summary">
+                        <div class="summary-item">
+                            <span class="label">Peak Risk Age:</span>
+                            <span class="value">50-59 (56.0% churn rate)</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="label">Lowest Risk Age:</span>
+                            <span class="value">25-29 (7.1% churn rate)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gender Analysis -->
+                <div class="insight-panel">
+                    <h3><i class="fas fa-venus-mars"></i> Gender Risk Distribution</h3>
+                    <div class="chart-container">
+                        <canvas id="genderChurnChart"></canvas>
+                    </div>
+                    <div class="insight-summary">
+                        <div class="summary-item">
+                            <span class="label">Female Risk:</span>
+                            <span class="value">25.1% churn rate (4,543 customers)</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="label">Male Risk:</span>
+                            <span class="value">16.5% churn rate (5,457 customers)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Portfolio Analysis -->
+                <div class="insight-panel">
+                    <h3><i class="fas fa-shopping-cart"></i> Product Portfolio Risk</h3>
+                    <div class="chart-container">
+                        <canvas id="productsChurnChart"></canvas>
+                    </div>
+                    <div class="insight-summary">
+                        <div class="summary-item">
+                            <span class="label">Critical Risk:</span>
+                            <span class="value">4 Products (100% churn rate)</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="label">Optimal Portfolio:</span>
+                            <span class="value">2 Products (7.6% churn rate)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Customer Value Tiers -->
+                <div class="insight-panel">
+                    <h3><i class="fas fa-star"></i> Customer Value Analysis</h3>
+                    <div class="chart-container">
+                        <canvas id="valueChurnChart"></canvas>
+                    </div>
+                    <div class="insight-summary">
+                        <div class="summary-item">
+                            <span class="label">Highest Value Risk:</span>
+                            <span class="value">Medium Tier (25.2% churn)</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="label">Safest Segment:</span>
+                            <span class="value">Low Tier (13.8% churn)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Activity & Engagement -->
+                <div class="insight-panel">
+                    <h3><i class="fas fa-user-clock"></i> Customer Engagement</h3>
+                    <div class="chart-container">
+                        <canvas id="activityChart"></canvas>
+                    </div>
+                    <div class="insight-summary">
+                        <div class="summary-item">
+                            <span class="label">Inactive Risk:</span>
+                            <span class="value">26.9% churn rate (4,849 customers)</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="label">Active Retention:</span>
+                            <span class="value">14.3% churn rate (5,151 customers)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Account Balance Distribution -->
+                <div class="insight-panel">
+                    <h3><i class="fas fa-coins"></i> Balance Risk Analysis</h3>
+                    <div class="chart-container">
+                        <canvas id="balanceChart"></canvas>
+                    </div>
+                    <div class="insight-summary">
+                        <div class="summary-item">
+                            <span class="label">Highest Risk:</span>
+                            <span class="value">Low Balance (66.7% churn)</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="label">Largest Segment:</span>
+                            <span class="value">Premium (38.3% customers)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tenure Analysis -->
+                <div class="insight-panel">
+                    <h3><i class="fas fa-calendar-alt"></i> Customer Tenure Impact</h3>
+                    <div class="chart-container">
+                        <canvas id="tenureChart"></canvas>
+                    </div>
+                    <div class="insight-summary">
+                        <div class="summary-item">
+                            <span class="label">New Customer Risk:</span>
+                            <span class="value">22.6% churn (0-2 years)</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="label">Most Stable:</span>
+                            <span class="value">18.7% churn (6-8 years)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Key Business Insights -->
+                <div class="insight-panel full-width">
+                    <h3><i class="fas fa-lightbulb"></i> Strategic Business Insights</h3>
+                    <div class="business-insights">
+                        <div class="insight-row">
+                            <div class="insight-card critical">
+                                <div class="card-header">
+                                    <div class="card-icon critical-icon">
+                                        <i class="fas fa-exclamation-triangle"></i>
+                                    </div>
+                                    <h4>Critical Alert</h4>
+                                </div>
+                                <p><strong>100% churn rate</strong> for customers with 4 products. Immediate portfolio optimization needed.</p>
+                                <div class="card-action">
+                                    <span class="priority-badge urgent">URGENT</span>
+                                </div>
+                            </div>
+                            <div class="insight-card warning">
+                                <div class="card-header">
+                                    <div class="card-icon warning-icon">
+                                        <i class="fas fa-flag"></i>
+                                    </div>
+                                    <h4>High Risk Segment</h4>
+                                </div>
+                                <p><strong>Female customers 50-59</strong> in Germany represent the highest combined risk profile.</p>
+                                <div class="card-action">
+                                    <span class="priority-badge high">HIGH PRIORITY</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="insight-row">
+                            <div class="insight-card opportunity">
+                                <div class="card-header">
+                                    <div class="card-icon opportunity-icon">
+                                        <i class="fas fa-bullseye"></i>
+                                    </div>
+                                    <h4>Retention Opportunity</h4>
+                                </div>
+                                <p><strong>2-product customers</strong> show 7.6% churn - optimal cross-sell target for single-product users.</p>
+                                <div class="card-action">
+                                    <span class="priority-badge medium">OPPORTUNITY</span>
+                                </div>
+                            </div>
+                            <div class="insight-card success">
+                                <div class="card-header">
+                                    <div class="card-icon success-icon">
+                                        <i class="fas fa-check-circle"></i>
+                                    </div>
+                                    <h4>Success Pattern</h4>
+                                </div>
+                                <p><strong>Active members</strong> have 47% lower churn rates than inactive customers.</p>
+                                <div class="card-action">
+                                    <span class="priority-badge success">BEST PRACTICE</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ML Models Section -->
+        <section id="models" class="section">
+            <div class="section-header">
+                <h1><i class="fas fa-robot"></i> Machine Learning Models</h1>
+                <p>Advanced XGBoost models with proven industry benchmarks</p>
+            </div>
+
+            <!-- Model Performance -->
+            <div class="models-container">
+                <div class="model-panel">
+                    <h3><i class="fas fa-users"></i> Banking Churn Prediction</h3>
+                    <div class="model-metrics">
+                        <div class="metric-row">
+                            <span class="metric-name">Accuracy</span>
+                            <div class="metric-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 91.6%"></div>
+                                </div>
+                                <span class="metric-percent">91.6%</span>
+                            </div>
+                        </div>
+                        <div class="metric-row">
+                            <span class="metric-name">Precision</span>
+                            <div class="metric-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 95.4%"></div>
+                                </div>
+                                <span class="metric-percent">95.4%</span>
+                            </div>
+                        </div>
+                        <div class="metric-row">
+                            <span class="metric-name">Recall</span>
+                            <div class="metric-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 87.4%"></div>
+                                </div>
+                                <span class="metric-percent">87.4%</span>
+                            </div>
+                        </div>
+                        <div class="metric-row">
+                            <span class="metric-name">AUC</span>
+                            <div class="metric-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 96.3%"></div>
+                                </div>
+                                <span class="metric-percent">96.3%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="model-details">
+                        <p><strong>Algorithm:</strong> XGBoost with SMOTE</p>
+                        <p><strong>Features:</strong> 64 engineered features</p>
+                        <p><strong>Training:</strong> 600 estimators, early stopping</p>
+                        <p><strong>Threshold:</strong> 0.56 (optimized for recall)</p>
+                    </div>
+                </div>
+
+                <div class="model-panel">
+                    <h3><i class="fas fa-shield-alt"></i> Fraud Detection</h3>
+                    <div class="model-metrics">
+                        <div class="metric-row">
+                            <span class="metric-name">Accuracy</span>
+                            <div class="metric-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 99.8%"></div>
+                                </div>
+                                <span class="metric-percent">99.8%</span>
+                            </div>
+                        </div>
+                        <div class="metric-row">
+                            <span class="metric-name">Precision</span>
+                            <div class="metric-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 70.9%"></div>
+                                </div>
+                                <span class="metric-percent">70.9%</span>
+                            </div>
+                        </div>
+                        <div class="metric-row">
+                            <span class="metric-name">Recall</span>
+                            <div class="metric-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 75.7%"></div>
+                                </div>
+                                <span class="metric-percent">75.7%</span>
+                            </div>
+                        </div>
+                        <div class="metric-row">
+                            <span class="metric-name">AUC</span>
+                            <div class="metric-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 94.5%"></div>
+                                </div>
+                                <span class="metric-percent">94.5%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="model-details">
+                        <p><strong>Algorithm:</strong> XGBoost Ensemble</p>
+                        <p><strong>Features:</strong> 31 PCA features + Amount_log</p>
+                        <p><strong>Training:</strong> 1200 estimators, AUCPR optimization</p>
+                        <p><strong>Threshold:</strong> 0.88 (optimized for precision)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ROC Curves Visualization -->
+            <div class="visualization-panel">
+                <h3><i class="fas fa-chart-area"></i> Model Performance Curves</h3>
+                <div id="rocCurves"></div>
+            </div>
+        </section>
+
+        <!-- Prediction Section -->
+        <section id="predict" class="section">
+            <div class="section-header">
+                <h1><i class="fas fa-magic"></i> Live Predictions</h1>
+                <p>Test our production-ready models with custom inputs</p>
+            </div>
+
+            <!-- Prediction Interface -->
+            <div class="prediction-container">
+                <!-- Banking Churn Prediction -->
+                <div class="prediction-panel enhanced">
+                    <div class="panel-header">
+                        <div class="panel-icon churn-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="panel-title">
+                            <h3>Banking Churn Prediction</h3>
+                            <p>Assess customer retention risk using advanced ML models</p>
+                        </div>
+                    </div>
+                    
+                    <div class="prediction-form enhanced-form">
+                        <div class="form-section">
+                            <h4><i class="fas fa-user"></i> Customer Profile</h4>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Credit Score</label>
+                                    <input type="number" id="creditScore" min="300" max="850" value="650">
+                                    <span class="input-hint">300-850 range</span>
+                                </div>
+                                <div class="form-group">
+                                    <label>Age</label>
+                                    <input type="number" id="age" min="18" max="100" value="35">
+                                    <span class="input-hint">Customer age</span>
+                                </div>
+                                <div class="form-group">
+                                    <label>Gender</label>
+                                    <select id="gender">
+                                        <option value="Male">Male</option>
+                                        <option value="Female">Female</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h4><i class="fas fa-globe"></i> Geographic & Tenure</h4>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Country</label>
+                                    <select id="country">
+                                        <option value="France">France</option>
+                                        <option value="Germany">Germany</option>
+                                        <option value="Spain">Spain</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Tenure (Years)</label>
+                                    <input type="number" id="tenure" min="0" max="10" value="3">
+                                    <span class="input-hint">Years with bank</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h4><i class="fas fa-coins"></i> Financial Profile</h4>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Account Balance</label>
+                                    <input type="number" id="balance" min="0" value="75000">
+                                    <span class="input-hint">Current balance</span>
+                                </div>
+                                <div class="form-group">
+                                    <label>Estimated Salary</label>
+                                    <input type="number" id="salary" min="0" value="100000">
+                                    <span class="input-hint">Annual income</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h4><i class="fas fa-shopping-cart"></i> Banking Products & Activity</h4>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Products Count</label>
+                                    <select id="products">
+                                        <option value="1">1 Product</option>
+                                        <option value="2" selected>2 Products</option>
+                                        <option value="3">3 Products</option>
+                                        <option value="4">4 Products</option>
+                                    </select>
+                                </div>
+                                <div class="form-group checkbox-group enhanced">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" id="hasCard" checked>
+                                        <span class="checkmark"></span>
+                                        Has Credit Card
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" id="isActive" checked>
+                                        <span class="checkmark"></span>
+                                        Active Member
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button class="predict-btn primary" onclick="predictChurn()">
+                                <i class="fas fa-chart-line"></i>
+                                <span>Predict Churn Risk</span>
+                            </button>
+                            <button class="predict-btn secondary" onclick="resetChurnForm()">
+                                <i class="fas fa-redo"></i>
+                                <span>Reset Form</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div id="churnResult" class="prediction-result enhanced-result"></div>
+                </div>
+
+                <!-- Fraud Detection Prediction -->
+                <div class="prediction-panel enhanced">
+                    <div class="panel-header">
+                        <div class="panel-icon fraud-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="panel-title">
+                            <h3>Fraud Detection</h3>
+                            <p>Real-time transaction fraud risk assessment</p>
+                        </div>
+                    </div>
+                    
+                    <div class="prediction-form enhanced-form">
+                        <div class="form-section">
+                            <h4><i class="fas fa-credit-card"></i> Transaction Details</h4>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Transaction Amount</label>
+                                    <input type="number" id="fraudAmount" min="0" step="0.01" value="100.00">
+                                    <span class="input-hint">Amount in USD</span>
+                                </div>
+                                <div class="form-group">
+                                    <label>Time Since First Transaction</label>
+                                    <input type="number" id="fraudTime" min="0" value="3600">
+                                    <span class="input-hint">Seconds from start</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-info">
+                            <div class="info-card">
+                                <i class="fas fa-info-circle"></i>
+                                <p>Fraud detection uses 28 anonymized PCA features (V1-V28) from the transaction. 
+                                For demo purposes, we'll simulate typical transaction patterns based on amount and timing.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button class="predict-btn primary" onclick="predictFraud()">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>Analyze Transaction</span>
+                            </button>
+                            <button class="predict-btn secondary" onclick="resetFraudForm()">
+                                <i class="fas fa-redo"></i>
+                                <span>Reset Form</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div id="fraudResult" class="prediction-result enhanced-result"></div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
